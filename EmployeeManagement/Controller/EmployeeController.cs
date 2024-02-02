@@ -21,7 +21,9 @@ namespace EmployeeManagement.Controller
 
             if (_context.TodoItems.Count() == 0)
             {
-                _context.TodoItems.Add(new TodoItem { Name = "Item1" });
+                _context.TodoItems.Add(new TodoItem { Name = "Item1", Id=1, IsComplete=false });
+                _context.TodoItems.Add(new TodoItem { Name = "Item2", Id = 2, IsComplete = true });
+
                 _context.SaveChanges();
             }
         }
