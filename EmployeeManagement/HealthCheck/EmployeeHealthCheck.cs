@@ -17,7 +17,7 @@ namespace EmployeeManagement.HealthCheck
         {
             EmployeeController employee = new EmployeeController(_context);
             
-            if (_context.TodoItems.ToList().Count < 1)
+            if (_context.TodoItems.ToList().Count > 1)
             {
                 return Task.FromResult(
                 HealthCheckResult.Healthy("A healthy result."));
